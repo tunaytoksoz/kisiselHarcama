@@ -12,7 +12,7 @@ $i=1;
 <hr>
 <hr>
 <h3 class="text-center">Harcama Tablom</h3>
-<table class="table table-borderless m-5">
+<table class="table table-hover m-5">
     <thead>
     <tr>
         <th scope="col">#</th>
@@ -20,6 +20,7 @@ $i=1;
         <th scope="col">Fiyat</th>
         <th scope="col">Miktar</th>
         <th scope="col">Harcama Tarihi</th>
+        <th scope="col">Toplam Fiyatı</th>
     </tr>
     </thead>
     <tbody>
@@ -30,17 +31,19 @@ $i=1;
         <td><?php echo $item['price']." TL" ?></td>
         <td><?php echo $item['quantity'] ?></td>
         <td><?php echo $item['date'] ?></td>
-        <?php $toplam += $item['price']; ?>
+        <td><?php echo $item['totalPrice'] ?></td>
+        <?php $toplam += $item['totalPrice']; ?>
     </tr>
     <?php  $i++;} ?>
     </tbody>
     <tbody>
     <tr>
         <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
         <th scope="col">Toplam: </th>
         <th scope="col"><?php echo $toplam." TL"; ?></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
 
     </tr>
     </tbody>
@@ -57,7 +60,7 @@ $i=1;
 ?>
 
 <h3 class="text-center">Gelir Tablom</h3>
-<table class="table table-borderless m-5">
+<table class="table table-hover m-5">
     <thead>
     <tr>
         <th scope="col">#</th>
@@ -65,6 +68,7 @@ $i=1;
         <th scope="col">Fiyat</th>
         <th scope="col">Miktar</th>
         <th scope="col">Gelir Tarihi</th>
+        <th scope="col">Toplam Fiyatı</th>
     </tr>
     </thead>
     <tbody>
@@ -75,17 +79,20 @@ $i=1;
         <td><?php echo $item['price']." TL" ?></td>
         <td><?php echo $item['quantity'] ?></td>
         <td><?php echo $item['date'] ?></td>
-        <?php $toplam += $item['price']; ?>
+        <td><?php echo $item['totalPrice'] ?></td>
+        <?php $toplam += $item['totalPrice']; ?>
     </tr>
     <?php $i++; } ?>
     </tbody>
     <tbody>
     <tr>
         <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
         <th scope="col">Toplam: </th>
         <th scope="col"><?php echo $toplam." TL"; ?></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+
 
     </tr>
     </tbody>

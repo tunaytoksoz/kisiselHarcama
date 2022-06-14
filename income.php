@@ -11,7 +11,9 @@ if (isset($_POST)) {
 
     $date = $_POST['date'];
 
-    $sql = "INSERT INTO `income`(`description`, `price`, `quantity`, `date`) VALUES ('$desc','$price','$quantity','$date')";
+    $totalPrice = $_POST['totalPrice'];
+
+    $sql = "INSERT INTO `income`(`description`, `price`, `quantity`, `date`, `totalPrice`) VALUES ('$desc','$price','$quantity','$date','$totalPrice')";
 
     $result = $conn->query($sql);
 
